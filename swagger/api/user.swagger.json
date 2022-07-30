@@ -38,7 +38,7 @@
         "parameters": [
           {
             "name": "nickname",
-            "description": "Идентификатор пользователя.",
+            "description": "Идентификатор пользователя. Регистронезависимый",
             "in": "path",
             "required": true,
             "type": "string"

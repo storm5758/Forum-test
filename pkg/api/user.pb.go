@@ -27,7 +27,7 @@ type UserCreateRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Идентификатор пользователя.
+	// Идентификатор пользователя. Регистронезависимый
 	Nickname string `protobuf:"bytes,1,opt,name=nickname,proto3" json:"nickname,omitempty"`
 	// Данные пользовательского профиля.
 	Profile *models.Profile `protobuf:"bytes,2,opt,name=profile,proto3" json:"profile,omitempty"`

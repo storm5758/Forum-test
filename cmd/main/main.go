@@ -6,6 +6,7 @@ import (
 	"log"
 
 	"github.com/jackc/pgx/v4/pgxpool"
+	postgres "github.com/moguchev/BD-Forum/internal/app/repository/postgres"
 	"github.com/moguchev/BD-Forum/internal/app/server"
 	services "github.com/moguchev/BD-Forum/internal/app/services"
 )
@@ -35,10 +36,15 @@ func main() {
 	config.MinConns = MinConns
 	config.MaxConns = MaxConns
 
+	// ceate repository
+	repo := postgres.NewRepository(pool)
+
 	// create server
 	srv, err := server.New(server.Services{
-		Admin:  services.NewAdminService(),
-		User:   services.NewUserService(),
+		Admin: services.NewAdminService(),
+		User: services.NewUserService(services.Deps{
+			UserRepository: repo,
+		}),
 		Forum:  services.NewForumService(),
 		Post:   services.NewPostService(),
 		Thread: services.NewThreadService(),

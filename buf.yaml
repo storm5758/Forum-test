@@ -12,7 +12,7 @@ deps:
   - buf.build/grpc-ecosystem/grpc-gateway
 lint:
   use:
-    - DEFAULT 
+    - DEFAULT
 breaking:
   use:
     - FILE

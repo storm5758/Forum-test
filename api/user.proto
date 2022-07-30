@@ -41,7 +41,7 @@ service User {
 }
 
 message UserCreateRequest {
-    // Идентификатор пользователя.
+    // Идентификатор пользователя. Регистронезависимый
     string nickname = 1 [(google.api.field_behavior) = REQUIRED];
 
     // Данные пользовательского профиля.

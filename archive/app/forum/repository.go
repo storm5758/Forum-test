@@ -6,7 +6,7 @@ import (
 	. "github.com/moguchev/BD-Forum/pkg/models"
 )
 
-type Repository interface {
+type RepositoryInterface interface {
 
 	// user section
 	CreateUser(User) error

@@ -1,11 +1,12 @@
 package repository
 
-import "github.com/jackc/pgx/v4/pgxpool"
+import (
+	"context"
 
-type Repository struct {
-	pool *pgxpool.Pool
-}
+	"github.com/moguchev/BD-Forum/internal/app/models"
+)
 
-func New(pool *pgxpool.Pool) *Repository {
-	return &Repository{pool}
+type User interface {
+	GetUsersByNicknameOrEmail(ctx context.Context, nickname, email string) ([]models.User, error)
+	CreateUser(ctx context.Context, u models.User) (models.User, error)
 }
