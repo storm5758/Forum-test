@@ -3,8 +3,7 @@ package service
 import (
 	"errors"
 
-	"github.com/moguchev/BD-Forum/pkg/messages"
-	. "github.com/moguchev/BD-Forum/pkg/models"
+	"github.com/storm5758/Forum-test/pkg/messages"
 )
 
 func (s Service) CreateUser(u User) ([]User, error) {

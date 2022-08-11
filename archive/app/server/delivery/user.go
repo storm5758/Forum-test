@@ -6,10 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/moguchev/BD-Forum/pkg/messages"
-	. "github.com/moguchev/BD-Forum/pkg/models"
-
 	"github.com/gorilla/mux"
+	"github.com/storm5758/Forum-test/pkg/messages"
 )
 
 func (h *Handler) GetUserByNick(w http.ResponseWriter, r *http.Request) {

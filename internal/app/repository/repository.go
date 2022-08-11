@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/moguchev/BD-Forum/internal/app/models"
+	"github.com/storm5758/Forum-test/internal/app/models"
 )
 
 type User interface {

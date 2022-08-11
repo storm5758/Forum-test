@@ -4,10 +4,10 @@ import (
 	"context"
 	"log"
 
-	"github.com/moguchev/BD-Forum/internal/app/models"
-	"github.com/moguchev/BD-Forum/internal/app/repository"
-	"github.com/moguchev/BD-Forum/pkg/api"
-	api_models "github.com/moguchev/BD-Forum/pkg/api/models"
+	"github.com/storm5758/Forum-test/internal/app/models"
+	"github.com/storm5758/Forum-test/internal/app/repository"
+	"github.com/storm5758/Forum-test/pkg/api"
+	api_models "github.com/storm5758/Forum-test/pkg/api/models"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

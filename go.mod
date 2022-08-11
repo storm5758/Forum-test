@@ -1,10 +1,10 @@
-module github.com/moguchev/BD-Forum
+module github.com/storm5758/Forum-test
 
 go 1.17
 
-replace github.com/moguchev/BD-Forum/pkg/api => ./pkg/api
+replace github.com/storm5758/Forum-test/pkg/api => ./pkg/api
 
-replace github.com/moguchev/BD-Forum/pkg/api/models => ./pkg/api/models
+replace github.com/storm5758/Forum-test/pkg/api/models => ./pkg/api/models
 
 require (
 	github.com/gorilla/mux v1.8.0

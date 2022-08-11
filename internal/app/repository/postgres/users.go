@@ -7,7 +7,7 @@ import (
 
 	"github.com/Masterminds/squirrel"
 	"github.com/georgysavva/scany/pgxscan"
-	"github.com/moguchev/BD-Forum/internal/app/models"
+	"github.com/storm5758/Forum-test/internal/app/models"
 )
 
 func (r *Repository) GetUsersByNicknameOrEmail(ctx context.Context, nickname, email string) ([]models.User, error) {

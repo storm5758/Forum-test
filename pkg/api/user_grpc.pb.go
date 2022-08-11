@@ -8,7 +8,7 @@ package api
 
 import (
 	context "context"
-	models "github.com/moguchev/BD-Forum/pkg/api/models"
+	models "github.com/storm5758/Forum-test/pkg/api/models"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

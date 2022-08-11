@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.moguchev.BD_Forum.api;
 
-option go_package = "github.com/moguchev/BD-Forum/pkg/api;api";
+option go_package = "github.com/storm5758/Forum-test/pkg/api;api";
 
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";

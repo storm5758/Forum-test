@@ -2,8 +2,6 @@ package forum
 
 import (
 	"time"
-
-	. "github.com/moguchev/BD-Forum/pkg/models"
 )
 
 type RepositoryInterface interface {

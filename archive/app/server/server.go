@@ -5,10 +5,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/moguchev/BD-Forum/app/forum/repository"
-	"github.com/moguchev/BD-Forum/app/forum/service"
-	"github.com/moguchev/BD-Forum/app/server/delivery"
-	"github.com/moguchev/BD-Forum/pkg/config"
+	"github.com/storm5758/Forum-test/app/forum/repository"
+	"github.com/storm5758/Forum-test/app/forum/service"
+	"github.com/storm5758/Forum-test/app/server/delivery"
+	"github.com/storm5758/Forum-test/pkg/config"
 
 	"github.com/gorilla/mux"
 	"github.com/jackc/pgx"

@@ -7,7 +7,7 @@
 package api
 
 import (
-	models "github.com/moguchev/BD-Forum/pkg/api/models"
+	models "github.com/storm5758/Forum-test/pkg/api/models"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"

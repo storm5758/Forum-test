@@ -9,7 +9,6 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	. "github.com/moguchev/BD-Forum/pkg/models"
 )
 
 func (h *Handler) GetPost(w http.ResponseWriter, r *http.Request) {

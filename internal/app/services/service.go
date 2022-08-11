@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	"github.com/moguchev/BD-Forum/pkg/api"
+	"github.com/storm5758/Forum-test/pkg/api"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"

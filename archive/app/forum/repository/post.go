@@ -7,8 +7,7 @@ import (
 	"strings"
 	"time"
 
-	. "github.com/moguchev/BD-Forum/pkg/models"
-	"github.com/moguchev/BD-Forum/pkg/sql_queries"
+	"github.com/storm5758/Forum-test/pkg/sql_queries"
 )
 
 func (r *Repository) GetPostById(id int64) (Post, error) {

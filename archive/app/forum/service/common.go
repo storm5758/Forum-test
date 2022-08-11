@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/moguchev/BD-Forum/app/forum"
+	"github.com/storm5758/Forum-test/app/forum"
 )
 
 type Service struct {

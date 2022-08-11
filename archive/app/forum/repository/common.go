@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/moguchev/BD-Forum/pkg/config"
+	"github.com/storm5758/Forum-test/pkg/config"
 )
 
 type Repository struct {

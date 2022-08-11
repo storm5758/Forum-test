@@ -1,9 +1,5 @@
 package forum
 
-import (
-	. "github.com/moguchev/BD-Forum/pkg/models"
-)
-
 type ServiceInterface interface {
 	// user section
 	CreateUser(User) ([]User, error)

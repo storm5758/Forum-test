@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	"github.com/moguchev/BD-Forum/pkg/api"
-	"github.com/moguchev/BD-Forum/pkg/api/models"
+	"github.com/storm5758/Forum-test/pkg/api"
+	"github.com/storm5758/Forum-test/pkg/api/models"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

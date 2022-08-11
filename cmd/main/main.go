@@ -6,9 +6,9 @@ import (
 	"log"
 
 	"github.com/jackc/pgx/v4/pgxpool"
-	postgres "github.com/moguchev/BD-Forum/internal/app/repository/postgres"
-	"github.com/moguchev/BD-Forum/internal/app/server"
-	services "github.com/moguchev/BD-Forum/internal/app/services"
+	postgres "github.com/storm5758/Forum-test/internal/app/repository/postgres"
+	"github.com/storm5758/Forum-test/internal/app/server"
+	services "github.com/storm5758/Forum-test/internal/app/services"
 )
 
 func main() {

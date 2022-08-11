@@ -6,7 +6,7 @@
 # See https://docs.buf.build/lint-usage
 # See https://docs.buf.build/breaking-usage
 version: v1
-name: buf.build/moguchev/BD-Forum
+name: buf.build/storm5758/Forum-test
 deps:
   - buf.build/googleapis/googleapis
   - buf.build/grpc-ecosystem/grpc-gateway

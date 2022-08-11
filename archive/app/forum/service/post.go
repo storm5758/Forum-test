@@ -1,9 +1,5 @@
 package service
 
-import (
-	. "github.com/moguchev/BD-Forum/pkg/models"
-)
-
 func (s Service) GetPostAccount(id int64, related []string) (PostAccount, error) {
 	fullPost := PostAccount{}
 

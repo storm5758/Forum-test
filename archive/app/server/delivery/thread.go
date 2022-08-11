@@ -8,8 +8,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/moguchev/BD-Forum/pkg/messages"
-	. "github.com/moguchev/BD-Forum/pkg/models"
+	"github.com/storm5758/Forum-test/pkg/messages"
 )
 
 func (h *Handler) UpdateThread(w http.ResponseWriter, r *http.Request) {

@@ -13,10 +13,9 @@ import (
 
 	"github.com/jackc/pgtype"
 	"github.com/jackc/pgx"
-	"github.com/moguchev/BD-Forum/pkg/codes"
-	"github.com/moguchev/BD-Forum/pkg/messages"
-	. "github.com/moguchev/BD-Forum/pkg/models"
-	"github.com/moguchev/BD-Forum/pkg/sql_queries"
+	"github.com/storm5758/Forum-test/pkg/codes"
+	"github.com/storm5758/Forum-test/pkg/messages"
+	"github.com/storm5758/Forum-test/pkg/sql_queries"
 )
 
 var getForumUsersTemplate *template.Template
