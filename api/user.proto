@@ -20,6 +20,7 @@ service User {
         };
     }
 
+
     // Получение информации о пользователе
     // 
     // Получение информации о пользователе форума по его имени.
@@ -46,6 +47,18 @@ message UserCreateRequest {
 
     // Данные пользовательского профиля.
     api.models.Profile profile = 2 [(google.api.field_behavior) = REQUIRED];
+
+    int64  age = 3;
+}
+
+message UserCreateRequestV2 {
+    // Идентификатор пользователя. Регистронезависимый
+    string nickname = 1 [(google.api.field_behavior) = REQUIRED];
+
+    // Данные пользовательского профиля.
+    api.models.Profile profile = 2 [(google.api.field_behavior) = REQUIRED];
+
+    int64  age = 3;
 }
 
 message UserGetOneRequest {

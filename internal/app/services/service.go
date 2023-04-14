@@ -9,24 +9,28 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-type adminService struct {
+type Implementation struct {
 	api.UnimplementedAdminServer
 }
 
-func NewAdminService() api.AdminServer {
-	return &adminService{}
+func NewAdminService() *Implementation {
+	return &Implementation{}
 }
 
 // Очистка всех данных в базе
 //
 // Безвозвратное удаление всей пользовательской информации из базы данных.
-func (s *adminService) Clear(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
+func (s *Implementation) Clear(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Clear not implemented")
 }
 
 // Получение инфомарции о базе данных
 //
 // Получение инфомарции о базе данных.
-func (s *adminService) Status(context.Context, *emptypb.Empty) (*api.StatusResponse, error) {
+func (s *Implementation) Status(context.Context, *emptypb.Empty) (*api.StatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Status not implemented")
+}
+
+func SomeFunc(a chan int) {
+
 }

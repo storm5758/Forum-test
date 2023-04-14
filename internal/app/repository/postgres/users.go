@@ -6,7 +6,8 @@ import (
 	"strings"
 
 	"github.com/Masterminds/squirrel"
-	"github.com/georgysavva/scany/pgxscan"
+	"github.com/jmoiron/sqlx"
+	"github.com/pkg/errors"
 	"github.com/storm5758/Forum-test/internal/app/models"
 )
 
@@ -26,8 +27,11 @@ func (r *Repository) GetUsersByNicknameOrEmail(ctx context.Context, nickname, em
 	}
 
 	var users []models.User
-	if err := pgxscan.Select(ctx, r.pool, &users, query, args...); err != nil {
-		return nil, fmt.Errorf("Repository.GetUsersByNiknameOrEmail: select: %w", err)
+
+	err = r.db.SelectContext(ctx, &users, query, args...)
+
+	if err != nil {
+		return nil, errors.Wrap(err, "db.SelectContext()")
 	}
 
 	return users, nil
@@ -44,17 +48,28 @@ func (r *Repository) CreateUser(ctx context.Context, user models.User) (models.U
 		return models.User{}, fmt.Errorf("Repository.UserCreate: to sql: %w", err)
 	}
 
-	row := r.pool.QueryRow(ctx, query, args...)
-	if err := row.Scan(&user.Nickname); err != nil {
-		return models.User{}, fmt.Errorf("Repository.UserCreate: insert: %w", err)
-	}
+	queryer := r.getQueryer(nil)
+	row := queryer.QueryRowxContext(ctx, query, args...)
 
+	var nickname string
+	err = row.Scan(&nickname)
+
+	if err != nil {
+		return models.User{}, errors.Wrap(err, "CreateOffice:Scan()")
+	}
 	return user, nil
 }
 
-// Создание нового пользователя
-//
-// Создание нового пользователя в базе данных.
-// func (s *userService) UserCreate(context.Context, *api.UserCreateRequest) (*models.User, error) {
-// 	return nil, status.Errorf(codes.Unimplemented, "method UserCreate not implemented")
-// }
+func (r *Repository) getQueryer(tx *sqlx.Tx) sqlx.QueryerContext {
+	if tx == nil {
+		return r.db
+	}
+	return tx
+}
+
+func (r *Repository) getExecer(tx *sqlx.Tx) sqlx.ExecerContext {
+	if tx == nil {
+		return r.db
+	}
+	return tx
+}

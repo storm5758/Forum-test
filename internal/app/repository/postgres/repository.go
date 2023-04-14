@@ -1,11 +1,14 @@
 package repository
 
-import "github.com/jackc/pgx/v4/pgxpool"
+import (
+	"github.com/jmoiron/sqlx"
+	"github.com/storm5758/Forum-test/internal/app/repository"
+)
 
 type Repository struct {
-	pool *pgxpool.Pool
+	db *sqlx.DB
 }
 
-func NewRepository(pool *pgxpool.Pool) *Repository {
-	return &Repository{pool}
+func NewRepository(db *sqlx.DB) repository.User {
+	return &Repository{db: db}
 }

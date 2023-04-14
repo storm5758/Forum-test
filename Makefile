@@ -13,3 +13,9 @@ migration:
 .test:
 	$(info Running tests...)
 	go test ./...
+
+.PHONY: cover
+cover:
+	go test -v $$(go list ./... | grep -v -E '/Forum-test/pkg/(api)') -covermode=count -coverprofile=/tmp/c.out
+	go tool cover -html=/tmp/c.out
+
