@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package github.moguchev.BD_Forum.api;
+package github.storm5758.Forum_test.api;
 
 option go_package = "github.com/storm5758/Forum-test/pkg/api;api";
 
