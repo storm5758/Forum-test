@@ -1,1 +1,9 @@
-postgresql/
+/bin
+/vendor
+/postgresql
+/vendor.pb
+/vendor.protogen
+.DS_STORE
+.DS_Store
+/.idea
+/.vscode
