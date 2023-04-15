@@ -4,7 +4,7 @@ const (
 	// Database config
 	Host     = "localhost"
 	Port     = 5432
-	User     = "test"
-	Password = "test"
+	User     = "user"
+	Password = "password"
 	DBname   = "forum"
 )
